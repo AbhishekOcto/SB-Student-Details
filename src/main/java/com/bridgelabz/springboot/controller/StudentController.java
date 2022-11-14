@@ -18,7 +18,7 @@ public class StudentController {
 	@Autowired
 	StudentService studentService;
 	
-	@GetMapping("/id")
+	@GetMapping("get/{id}")
 	public Student getById(@RequestParam(value = "id", defaultValue = "1")int id) {
 		return studentService.getById(id);
 	}
